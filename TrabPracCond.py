@@ -114,7 +114,169 @@
 #pantalla.
 
 
+#palabra = input("Ingrese una palabra o frase: ")
 
+#vocal = "aeiouAEIOU"
+
+#if len(palabra) > 0 and palabra [-1] in vocal:
+#    palabra = palabra + "!"
+
+#print (palabra)
+
+#Escribir un programa que solicite al usuario que ingrese su nombre y el número 1, 2 o 3 
+#dependiendo de la opción que desee: 
+#1. Si quiere su nombre en mayúsculas. Por ejemplo: PEDRO. 
+#2. Si quiere su nombre en minúsculas. Por ejemplo: pedro. 
+#3. Si quiere su nombre con la primera letra mayúscula. Por ejemplo: Pedro. 
+#El programa debe transformar el nombre ingresado de acuerdo a la opción seleccionada por el 
+#usuario e imprimir el resultado por pantalla. Nota: investigue uso de las funciones upper(), 
+#lower() y title() de Python para convertir entre mayúsculas y minúsculas. 
+
+#nombre = input("Ingrese su nombre: ")
+
+#opcion = int(input("Ingrese: 1 si quiere su nombre en mayuscula.2 si quiere su nombre en minuscula. 3 si quiere su nombre con la primera letra en mayuscula: "))
+
+#if opcion == 1:
+#    print(nombre.upper())
+#elif opcion == 2:
+#    print(nombre.lower())
+#elif opcion == 3:
+#    print (nombre.title())
+
+#Escribir un programa que pida al usuario la magnitud de un terremoto, clasifique la 
+#magnitud en una de las siguientes categorías según la escala de Richter e imprima el resultado 
+#por pantalla: 
+#● Menor que 3: "Muy leve" (imperceptible). 
+#● Mayor o igual que 3  y menor que 4: "Leve" (ligeramente perceptible). 
+#● Mayor o igual que 4  y menor que 5: "Moderado" (sentido por personas, pero 
+#generalmente no causa daños). 
+#● Mayor o igual que 5  y menor que 6: "Fuerte" (puede causar daños en estructuras 
+#débiles). 
+#● Mayor o igual que 6  y menor que 7: "Muy Fuerte" (puede causar daños significativos). 
+#● Mayor o igual que 7: "Extremo" (puede causar graves daños a gran escala).
+
+#magnitud = float(input("Por favor ingrese la marnitud del terremoto en escala Richter: "))
+
+#if magnitud < 3:
+#    print("Muy leve (imperceptible)")
+#elif magnitud >= 3 and magnitud < 4:
+#    print ("leve (ligeramente perceptible)")
+#elif magnitud >= 4 and magnitud < 5:
+#    print("Moderado (Sentido por personas pero generalmente no causa daños)")
+#elif magnitud >= 5 and magnitud < 6:
+#    print("Fuerte (Puede causar daños a estructuras debiles)")
+#elif magnitud >=6 and magnitud < 7:
+#    print("Muy Fuerte (Puede causar daños significativos)")
+#elif magnitud >= 7:
+#    print("Extremo (puede causar graves daños a gran escala)")
+
+#Utilizando la información aportada en el pdf del trabajo practico condicionales en el punto 10 
+
+#Escribir un programa que pregunte al usuario en cuál hemisferio se encuentra (N/S), qué mes 
+#del año es y qué día es. El programa deberá utilizar esa información para imprimir por pantalla 
+#si el usuario se encuentra en otoño, invierno, primavera o verano. 
+
+emisferio = input("Por favor ingrese el emisferio en el que se encentra con una S para sur y una N para norte: ")
+
+fecha_dia = int(input("Ingrese en que dia del mes se encuentra: "))
+
+fecha_mes = int(input("Ingrese el mes en el que se encuentra teniendo en cuenta que enero es 1, febrero es 2, marzo es 3 y asi susesivamente: "))
+
+if emisferio == "N" or emisferio == "n":
+    if fecha_mes == 12 :
+        if fecha_dia >= 21:
+            print ("Estas en Invierno")
+        elif fecha_dia <= 20:
+            print("Estas en Otoño")
+        else:
+            print("Ingrese un dia valido")
+    elif fecha_mes == 1 :
+        print ("Estas en Invierno")
+    elif fecha_mes == 2:
+        print ("Estas en Invierno")
+    elif fecha_mes == 3:
+        if fecha_dia <= 20 :
+            print ("Estas en Invierno")
+        elif fecha_dia >= 21:
+            print ("Estas en Primavera")
+        else:
+            print("Ingrese un dia valido")
+    elif fecha_mes == 4 :
+        print ("Estas en Primavera")
+    elif fecha_mes == 5:
+        print ("Estas en Primavera")
+    elif fecha_mes == 6:
+        if fecha_dia <= 20 :
+            print ("Estas en Primavera")
+        elif fecha_dia >= 21:
+            print ("Estas en Verano")
+        else:
+            print("Ingrese un dia valido")
+    elif fecha_mes == 7 :
+        print ("Estas en Verano")
+    elif fecha_mes == 8:
+        print ("Estas en Verano")
+    elif fecha_mes == 9:
+        if fecha_dia <= 20 :
+            print ("Estas en Verano")
+        elif fecha_dia >= 21:
+            print ("Estas en Otoño")
+        else:
+            print("Ingrese un dia valido")
+    elif fecha_mes == 10 :
+        print ("Estas en otoño")
+    elif fecha_mes == 11:
+        print ("Estas en otoño")
+    else:
+        print("Ingrese un mes valido")
+
+if emisferio == "S" or emisferio == "s":
+    if fecha_mes == 12 :
+        if fecha_dia >= 21:
+            print ("Estas en Verano")
+        elif fecha_dia <= 20:
+            print("Estas en Primavera")
+        else:
+            print("Ingrese un dia valido")
+    elif fecha_mes == 1 :
+        print ("Estas en Verano")
+    elif fecha_mes == 2:
+        print ("Estas en Verano")
+    elif fecha_mes == 3:
+        if fecha_dia <= 20 :
+            print ("Estas en Verano")
+        elif fecha_dia >= 21:
+            print ("Estas en Otoño")
+        else:
+            print("Ingrese un dia valido")
+    elif fecha_mes == 4 :
+        print ("Estas en Otoño")
+    elif fecha_mes == 5:
+        print ("Estas en Otoño")
+    elif fecha_mes == 6:
+        if fecha_dia <= 20 :
+            print ("Estas en Otoño")
+        elif fecha_dia >= 21:
+            print ("Estas en Invierno")
+        else:
+            print("Ingrese un dia valido")
+    elif fecha_mes == 7 :
+        print ("Estas en Invierno")
+    elif fecha_mes == 8:
+        print ("Estas en Invierno")
+    elif fecha_mes == 9:
+        if fecha_dia <= 20 :
+            print ("Estas en Invierno")
+        elif fecha_dia >= 21:
+            print ("Estas en Primavera")
+        else:
+            print("Ingrese un dia valido")
+    elif fecha_mes == 10 :
+        print ("Estas en Primavera")
+    elif fecha_mes == 11:
+        print ("Estas en Primavera")
+    else:
+        print("Ingrese un mes valido")
 
 
 
